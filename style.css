@@ -196,7 +196,7 @@ nav {
     gap: 0; 
 }
 
-/* UPDATED: Price color is now white/light */
+/* Price color is white/light */
 .free-price-tag {
     font-size: 12px;
     color: var(--text-light); 
@@ -266,24 +266,35 @@ nav {
         
 /* ------------------- IMAGE OF THE THING BOX ------------------- */
 .section-2-image-top {
+    /* Max-width limits the size and centers the block */
     width: 100%;
-    max-width: 1200px;
-    margin: 20px auto 10px;
-    height: 250px;
+    max-width: 800px; /* Max width set to 800px */
+    
+    /* 16:9 Aspect Ratio Hack */
+    height: 0; 
+    padding-bottom: 56.25%; /* Height is 9/16 of the width (16:9 ratio) */
+
+    margin: 20px auto 10px; /* Center horizontally (auto) and provide vertical space */
+    
+    /* Display properties (these remain similar but ensure content centering inside the hack) */
+    position: relative; 
     background-color: #333333;
+    border-radius: 15px;
+    
+    /* Centering the text inside the box */
     display: flex;
     align-items: center;
     justify-content: center;
+    
     color: var(--primary-color);
     font-size: 24px;
     font-weight: 700;
-    border-radius: 15px;
 }
 
 /* ------------------- FIRST CHOICE GAME (SECTION 2) ------------------- */
 .section-2 {
     position: relative;
-    padding: 40px 0;
+    padding: 30px 0; 
     background-color: var(--dark-bg);
     z-index: 5;
 }
@@ -309,13 +320,13 @@ nav {
 
 /* ------------------- IMAGE GALLERY (NEW SECTION) ------------------- */
 
-/* NEW: Style to hide elements initially */
+/* Style to hide elements initially */
 .hidden-gallery-item {
     display: none !important; 
 }
 
 .image-gallery-section {
-    padding: 40px 0;
+    padding: 30px 0; 
     text-align: center;
     background-color: var(--dark-bg);
 }
@@ -354,7 +365,7 @@ nav {
 /* ------------------- YOUTUBE VIDEO SECTION (SECTION 3) ------------------- */
 .section-3 {
     position: relative;
-    padding: 40px 0;
+    padding: 30px 0; 
     background-color: var(--dark-bg);
     z-index: 5;
 }
@@ -381,7 +392,7 @@ nav {
     display: block;
 }
 
-/* UPDATED: Play button circle changed to dark/border, triangle changed to green */
+/* Play button circle changed to dark/border, triangle changed to green */
 .play-btn {
     position: absolute;
     top: 50%;
@@ -421,7 +432,7 @@ nav {
         
 /* ------------------- SOCIAL HANDLES SECTION ------------------- */
 .social-section {
-    padding: 50px 0 70px;
+    padding: 30px 0 40px; 
     text-align: center;
 }
 
@@ -495,8 +506,7 @@ nav {
     }
     
     .gallery-grid-placeholder {
-        /* On mobile, this remains 2 columns, as it's the main layout now */
         grid-template-columns: repeat(2, 1fr);
     }
-	}
+}
 
