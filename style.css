@@ -58,6 +58,12 @@ a {
     margin-left: 5px;
 }
 
+/* New style to center the "Play Games" button area horizontally */
+.centered-button {
+    justify-content: center; /* Centers items horizontally in the flex container */
+    width: 100%; 
+}
+
 
 /* ------------------- HEADER & NAVBAR ------------------- */
 header {
@@ -96,7 +102,7 @@ nav {
     color: var(--primary-color);
 }
 
-/* Style for the new LOGIN button/box */
+/* Style for the LOGIN button/box */
 .nav-button-box {
     margin-left: 30px;
 }
@@ -119,7 +125,7 @@ nav {
 /* ------------------- HERO SECTION ------------------- */
 .hero {
     position: relative;
-    /* Pushes hero content higher to align with raised header */
+    /* Pushes hero content higher */
     padding-top: 100px; 
     height: 100vh;
     min-height: 800px;
@@ -171,6 +177,7 @@ nav {
 .hero-text .add-to-cart span {
     font-size: 12px;
     color: var(--text-gray);
+    font-weight: 600; /* Made 'FREE' slightly bolder */
 }
 
 .hero-visual {
@@ -179,12 +186,6 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-}
-
-.hero-visual .price {
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 20px;
 }
         
 /* Placeholder for the main controller image - NO URL, uses dark grey */
@@ -217,7 +218,6 @@ nav {
     gap: 15px;
     margin-top: 20px;
     align-items: center;
-    /* Optional: overflow: hidden; if you were to implement actual JS sliding */
 }
 
 .album-box {
@@ -243,7 +243,7 @@ nav {
 }
 
 .album-slider-container .album-arrow:last-child {
-    color: var(--primary-color); /* Matches the original design's accent color for the right arrow */
+    color: var(--primary-color); 
 }
 
 .album-arrow:hover {
@@ -256,6 +256,8 @@ nav {
 .section-2-image-top {
     /* Placeholder size for the image above the text */
     width: 100%;
+    max-width: 1200px;
+    margin: 50px auto 50px; /* Center the block and add spacing */
     height: 300px; 
     background-color: #333333; /* Dark gray placeholder color */
     display: flex;
@@ -264,7 +266,7 @@ nav {
     color: var(--primary-color);
     font-size: 24px;
     font-weight: 700;
-    margin-bottom: 50px;
+    border-radius: 10px;
 }
 
 .section-2 {
