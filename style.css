@@ -207,21 +207,24 @@ nav {
 }
 
 /* Placeholder for the green sphere - MOVED BEHIND DFOX TEXT, SMALLER */
+/* Placeholder for the green sphere - FINAL PERFECT PLACEMENT */
 .hero-green-ball {
     position: absolute;
-    /* ADJUSTED POSITIONING TO SIT BEHIND 'dF' */
-    top: 25%; /* Move slightly lower down the page */
-    left: 15%; /* Move further right to align with the text block */
-    /* SIZE IS KEPT SMALL */
+    /* Adjusted Top to align with the vertical center of the text */
+    top: 25%; 
+    /* Adjusted Left to align directly behind the 'd' and 'F' */
+    left: 17%; 
+    /* Size kept small */
     width: 100px;
     height: 100px; 
     background: var(--primary-color);
     border-radius: 50%;
     opacity: 0.7; 
-    /* z-index: 3 is critical to keep it behind the text (which implicitly has a higher z-index) */
+    /* z-index: 3 ensures it is behind the text (h1 is z-index 5) */
     z-index: 3; 
     transform: translateY(-50%);
 }
+
 
 
 
