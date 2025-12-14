@@ -160,15 +160,18 @@ nav {
     position: relative;
     z-index: 2;
     display: flex;
-    justify-content: space-between;
+    /* CHANGED: Center content for better overall alignment */
+    justify-content: center; 
     align-items: flex-start;
     padding-top: 50px;
 }
 
 .hero-text {
-    max-width: 45%;
+    /* ADJUSTED: Reduced width and added margin to center overall block */
+    max-width: 40%; 
     position: relative; 
     z-index: 5;
+    margin-right: 5%; 
 }
 
 .hero-text h1 {
@@ -204,10 +207,12 @@ nav {
 
 .hero-visual {
     position: relative;
-    max-width: 50%;
+    /* ADJUSTED: Reduced width to balance with text */
+    max-width: 40%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center; /* Center items within hero-visual */
+    padding-top: 30px; 
 }
         
 /* Placeholder for the main controller image - NO URL, uses dark grey */
@@ -217,7 +222,7 @@ nav {
     background: var(--mid-bg); 
     border-radius: 10px;
     transform: rotate(-30deg);
-    margin-right: -50px;
+    margin-right: -50px; /* Kept for the tilt effect */
 }
 
 /* Placeholder for the green sphere - FINAL PERFECT PLACEMENT */
@@ -443,6 +448,7 @@ nav {
     .hero-text, .hero-visual {
         max-width: 100%;
         text-align: center;
+        margin-right: 0;
     }
     
     .hero-text h1 {
