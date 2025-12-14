@@ -1,26 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // ------------------- ALBUM SLIDER LOGIC -------------------
-    const wrapper = document.querySelector('.album-wrapper');
+    // ------------------- GAMES SLIDER LOGIC (formerly ALBUM SLIDER) -------------------
+    const wrapper = document.querySelector('.game-wrapper'); // Updated class name
     const slideLeftBtn = document.getElementById('slide-left');
     const slideRightBtn = document.getElementById('slide-right');
-    const albumBoxWidth = 150; 
+    const gameBoxWidth = 150; // Updated variable name
     let currentPosition = 0;
-    const albumCount = wrapper.children.length;
+    const gameCount = wrapper.children.length; // Updated variable name
     // Assuming 3 visible items in the 430px viewport on larger screens
-    const maxShift = (albumCount - 3) * albumBoxWidth; 
+    const maxShift = (gameCount - 3) * gameBoxWidth; 
 
 
     if (slideRightBtn && slideLeftBtn && wrapper) {
         slideRightBtn.addEventListener('click', () => {
             if (currentPosition < maxShift) {
-                currentPosition += albumBoxWidth;
+                currentPosition += gameBoxWidth;
                 wrapper.style.transform = `translateX(-${currentPosition}px)`;
             }
         });
 
         slideLeftBtn.addEventListener('click', () => {
             if (currentPosition > 0) {
-                currentPosition -= albumBoxWidth;
+                currentPosition -= gameBoxWidth;
                 wrapper.style.transform = `translateX(-${currentPosition}px)`;
             }
         });
