@@ -206,23 +206,23 @@ nav {
     margin-right: -50px;
 }
 
-/* Placeholder for the large green sphere - MOVED BEHIND DFOX TEXT */
-/* Placeholder for the large green sphere - MOVED BEHIND DFOX TEXT */
+/* Placeholder for the green sphere - MOVED BEHIND DFOX TEXT, SMALLER */
 .hero-green-ball {
     position: absolute;
-    /* CHANGE: Adjusted top and left position */
-    top: 15%;
-    left: 0; 
-    /* CHANGE: Reduced size from 150px to 100px */
+    /* ADJUSTED POSITIONING TO SIT BEHIND 'dF' */
+    top: 25%; /* Move slightly lower down the page */
+    left: 15%; /* Move further right to align with the text block */
+    /* SIZE IS KEPT SMALL */
     width: 100px;
     height: 100px; 
     background: var(--primary-color);
     border-radius: 50%;
     opacity: 0.7; 
-    /* Lowered z-index to put it behind the h1 in hero-text */
+    /* z-index: 3 is critical to keep it behind the text (which implicitly has a higher z-index) */
     z-index: 3; 
     transform: translateY(-50%);
 }
+
 
 
 /* --- ALBUM SLIDER STYLES (Enlarged and with arrows) --- */
