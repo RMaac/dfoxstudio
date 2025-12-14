@@ -70,7 +70,8 @@ a {
 header {
     position: absolute;
     width: 100%;
-    padding: 20px 0;
+    /* Pushes navigation links higher up */
+    padding: 15px 0; 
     z-index: 10;
 }
 
@@ -80,9 +81,13 @@ nav {
     align-items: center;
 }
 
-.nav-links li {
+.nav-links {
     list-style: none;
-    display: inline;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
     margin-left: 30px;
 }
 
@@ -98,12 +103,33 @@ nav {
     color: var(--primary-color);
 }
 
+/* Style for the new LOGIN button/box */
+.nav-button-box {
+    margin-left: 30px;
+}
+
+.nav-button-box a {
+    background: var(--primary-color);
+    color: var(--dark-bg) !important;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.3s;
+    opacity: 1 !important;
+}
+
+.nav-button-box a:hover {
+    background: #4cc936;
+}
+
+
 /* ------------------- HERO SECTION ------------------- */
 .hero {
     position: relative;
+    /* Pushes hero content higher to make space */
+    padding-top: 100px; 
     height: 100vh;
     min-height: 800px;
-    padding-top: 150px;
     overflow: hidden;
 }
 
@@ -168,24 +194,28 @@ nav {
     margin-bottom: 20px;
 }
         
-/* Placeholder for the main controller image */
+/* Placeholder for the main controller image - Removed URL, using dark grey */
 .controller-main-placeholder {
     width: 350px;
     height: 250px;
-    background: url("https://i.ibb.co/6y46610/controller-main.png") no-repeat center center/contain;
+    background: var(--mid-bg); /* Use solid color instead of image */
+    border-radius: 10px;
     transform: rotate(-30deg);
     margin-right: -50px;
+    /* You would replace this with your actual image later */
 }
 
-/* REMOVED: .rotation-text rule here */
 
+/* Placeholder for the large green patterned sphere - Removed URL, using primary color */
 .hero-green-ball {
     position: absolute;
     top: 40%;
     left: 10%;
     width: 150px;
     height: 150px;
-    background: url("https://i.ibb.co/0VfT0Y4/green-ball.png") no-repeat center center/contain;
+    background: var(--primary-color); /* Use solid color instead of image */
+    border-radius: 50%;
+    opacity: 0.5; /* Added slight opacity to mimic texture */
     z-index: 3;
     transform: translateY(-50%);
 }
@@ -211,10 +241,10 @@ nav {
     margin-bottom: 10px;
 }
         
+/* Placeholder for the top-right image - Removed URL, using dark grey */
 .section-2-img {
-    /* Placeholder for the top-right image (close-up of controller) */
     height: 350px;
-    background: url("https://i.ibb.co/L5rJg7T/controller-buttons.png") no-repeat center right/cover;
+    background: var(--mid-bg); /* Use solid color instead of image */
     border-radius: 10px;
 }
         
@@ -233,10 +263,10 @@ nav {
     align-items: center;
 }
         
+/* Placeholder for the bottom-left image - Removed URL, using dark grey */
 .section-3-img {
-    /* Placeholder for the bottom-left image (Controller + Console) */
     height: 400px;
-    background: url("https://i.ibb.co/3s367mK/console-and-controller.png") no-repeat center left/cover;
+    background: var(--mid-bg); /* Use solid color instead of image */
     border-radius: 10px;
     position: relative;
 }
@@ -266,7 +296,6 @@ nav {
     position: relative;
     padding: 40px;
     background: #202020;
-    /* Used clip-path to create the diagonal-cut look */
     clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
     margin-left: -50px;
 }
