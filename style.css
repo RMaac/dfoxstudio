@@ -207,13 +207,15 @@ nav {
 }
 
 /* Placeholder for the large green sphere - MOVED BEHIND DFOX TEXT */
+/* Placeholder for the large green sphere - MOVED BEHIND DFOX TEXT */
 .hero-green-ball {
     position: absolute;
-    /* Moved left to partially cover 'd' and 'f' */
+    /* CHANGE: Adjusted top and left position */
     top: 15%;
     left: 0; 
-    width: 150px;
-    height: 150px;
+    /* CHANGE: Reduced size from 150px to 100px */
+    width: 100px;
+    height: 100px; 
     background: var(--primary-color);
     border-radius: 50%;
     opacity: 0.7; 
@@ -221,6 +223,7 @@ nav {
     z-index: 3; 
     transform: translateY(-50%);
 }
+
 
 /* --- ALBUM SLIDER STYLES (Enlarged and with arrows) --- */
 .album-slider-container {
