@@ -268,15 +268,15 @@ nav {
 .section-2-image-top {
     /* Max-width limits the size and centers the block */
     width: 100%;
-    max-width: 800px; /* Max width set to 800px */
+    max-width: 600px; /* REDUCED max width for a smaller, thumbnail-like size */
     
     /* 16:9 Aspect Ratio Hack */
     height: 0; 
     padding-bottom: 56.25%; /* Height is 9/16 of the width (16:9 ratio) */
 
-    margin: 20px auto 10px; /* Center horizontally (auto) and provide vertical space */
+    margin: 30px auto 30px; /* INCREASED margin top/bottom for better separation from edges */
     
-    /* Display properties (these remain similar but ensure content centering inside the hack) */
+    /* Display properties */
     position: relative; 
     background-color: #333333;
     border-radius: 15px;
@@ -289,6 +289,8 @@ nav {
     color: var(--primary-color);
     font-size: 24px;
     font-weight: 700;
+    
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
 }
 
 /* ------------------- FIRST CHOICE GAME (SECTION 2) ------------------- */
@@ -508,5 +510,5 @@ nav {
     .gallery-grid-placeholder {
         grid-template-columns: repeat(2, 1fr);
     }
-}
+    }
 
