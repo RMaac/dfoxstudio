@@ -37,29 +37,31 @@ a {
 .btn-primary {
     display: inline-block;
     background: var(--primary-color);
-    color: var(--dark-bg);
+    color: var(--dark-bg); /* Text color inside button is dark */
     padding: 10px 25px;
     border-radius: 50px;
     font-weight: 600;
     transition: background 0.3s;
-    /* Added alignment for internal content */
+    /* Added flex properties for perfect vertical alignment */
     display: flex; 
     align-items: center;
-    gap: 8px; /* Space between icon/emoji and text */
+    gap: 8px; /* Space between icon and text */
 }
 
 .btn-primary:hover {
     background: #4cc936;
 }
 
-/* Specific styling for the emoji */
-.game-controller-emoji {
+/* Specific styling for the icon - ensures solid dark color and alignment */
+.game-controller-icon-fixed {
+    /* Color of the icon is the same as the text inside the green button */
+    color: var(--dark-bg); 
     font-size: 1.2em;
-    /* Aligns the emoji vertically within the button */
     line-height: 1; 
     position: relative;
-    top: 1px;
+    top: 1px; /* Fine-tune vertical alignment */
 }
+
 
 .pre-order-link {
     color: var(--primary-color);
@@ -184,7 +186,6 @@ nav {
 .hero-text .add-to-cart {
     display: flex;
     align-items: center;
-    /* Removed gap because we are styling the price tag separately */
     gap: 0; 
 }
 
@@ -463,5 +464,5 @@ nav {
     .social-handles-grid {
         flex-wrap: wrap;
     }
-    }
-    
+}
+
