@@ -48,6 +48,13 @@ a {
     background: #4cc936;
 }
 
+/* Specific styling for the gamepad icon to make it look "real/PS-like" */
+.game-controller-icon {
+    font-size: 1.2em;
+    transform: scaleX(1.1) translateY(-1px); /* Slightly stretch it horizontally and move it down */
+    position: relative;
+}
+
 .pre-order-link {
     color: var(--primary-color);
     font-weight: 600;
@@ -69,7 +76,6 @@ a {
 header {
     position: absolute;
     width: 100%;
-    /* Pushes navigation links slightly higher up */
     padding: 15px 0; 
     z-index: 10;
 }
@@ -125,7 +131,6 @@ nav {
 /* ------------------- HERO SECTION ------------------- */
 .hero {
     position: relative;
-    /* Pushes hero content higher */
     padding-top: 100px; 
     height: 100vh;
     min-height: 800px;
@@ -154,6 +159,9 @@ nav {
 
 .hero-text {
     max-width: 45%;
+    /* Added alignment to ensure text flows properly around the ball */
+    position: relative; 
+    z-index: 5;
 }
 
 .hero-text h1 {
@@ -177,7 +185,7 @@ nav {
 .hero-text .add-to-cart span {
     font-size: 12px;
     color: var(--text-gray);
-    font-weight: 600; /* Made 'FREE' slightly bolder */
+    font-weight: 600;
 }
 
 .hero-visual {
@@ -198,33 +206,39 @@ nav {
     margin-right: -50px;
 }
 
-/* Placeholder for the large green sphere - NO URL, uses solid color */
+/* Placeholder for the large green sphere - MOVED BEHIND DFOX TEXT */
 .hero-green-ball {
     position: absolute;
-    top: 40%;
-    left: 10%;
+    /* Moved left to partially cover 'd' and 'f' */
+    top: 15%;
+    left: 0; 
     width: 150px;
     height: 150px;
     background: var(--primary-color);
     border-radius: 50%;
     opacity: 0.7; 
-    z-index: 3;
+    /* Lowered z-index to put it behind the h1 in hero-text */
+    z-index: 3; 
     transform: translateY(-50%);
 }
 
 /* --- ALBUM SLIDER STYLES (Enlarged and with arrows) --- */
 .album-slider-container {
     display: flex;
-    gap: 15px;
+    /* Centered the container */
+    justify-content: center; 
+    gap: 20px; /* Slightly more gap */
     margin-top: 20px;
     align-items: center;
+    /* To perfectly center the box arrangement */
+    width: 100%; 
 }
 
 .album-box {
-    width: 120px; 
-    height: 120px; 
+    width: 130px; /* Slightly larger */
+    height: 130px; /* Slightly larger */
     background-color: #383838; 
-    border-radius: 10px;
+    border-radius: 15px; /* Slightly rounder corners */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -236,14 +250,15 @@ nav {
 }
 
 .album-arrow {
-    font-size: 18px; 
+    font-size: 20px; /* Larger arrow */
     color: var(--text-gray);
     cursor: pointer;
     transition: color 0.2s;
 }
 
-.album-slider-container .album-arrow:last-child {
-    color: var(--primary-color); 
+/* Right arrow is now styled identically to the left (gray) */
+.album-arrow-right {
+    color: var(--text-gray);
 }
 
 .album-arrow:hover {
