@@ -3,83 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Controller</title>
+    <title>dFox Studio - Gaming Design</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="navbar">
-        <nav>
-            <ul>
+
+    <header>
+        <nav class="container">
+            <ul class="nav-links">
                 <li><a href="#">About</a></li>
-                <li><a href="#">How it Work</a></li>
-                <li><a class="active" href="#">Go to Shop</a></li>
+                <li><a href="#">How it works</a></li>
+                <li><a href="#">Go to Shop</a></li>
+                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
             </ul>
         </nav>
-        <button class="menu-btn">&#9776;</button>
     </header>
 
-    <main>
-        <section class="hero-section">
-            <div class="hero-content">
-                <h1 class="main-heading">Controller</h1>
-                <p>This is a Hyper Ergonomic XBOX Controller Concept. Makes Gaming For More Comfortable.</p>
-                <button class="cta-button">ADD TO CART</button>
-            </div>
-            <div class="hero-image-area">
+    <section class="hero">
+        <div class="hero-gradient-bg"></div>
+        <div class="hero-green-ball"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>dFox Studio</h1>
+                <p>This is a Hyper Ergonomic XBOX Controller Concept. Makes Gaming Far More Comfortable.</p>
+                <div class="add-to-cart">
+                    <a href="#" class="btn-primary"><i class="fas fa-cart-plus"></i> ADD TO CART</a>
+                    <span>$125</span>
                 </div>
-        </section>
-
-        <section class="powerful-controller-section">
-            <div class="content-left">
-                <h3>Powerful Game</h3>
-                <h4>Controller</h4>
+            </div>
+            <div class="hero-visual">
+                <span class="price">$125</span>
+                <div class="controller-main-placeholder"></div>
+                
+                <div style="display: flex; gap: 15px; margin-top: 20px; align-items: center;">
+                    <i class="fas fa-chevron-left" style="font-size: 18px; color: var(--text-gray);"></i>
+                    <div class="thumbnail-placeholder"></div>
+                    <div class="thumbnail-placeholder"></div>
+                    <div class="thumbnail-placeholder"></div>
+                    <i class="fas fa-chevron-right" style="font-size: 18px; color: var(--primary-color);"></i>
+                </div>
+                <p class="rotation-text">Rotation: 360°</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section-2">
+        <div class="container section-2-layout">
+            <div class="section-2-text">
+                <h2>Powerful Game Controller</h2>
                 <p>XBox Elite Wireless Controller Series 2</p>
-                <a href="#" class="pre-order-link">PRE-ORDER NOW &rarr;</a>
+                <a href="#" class="pre-order-link">PRE-ORDER NOW <i class="fas fa-chevron-right"></i></a>
             </div>
-            <div class="image-right">
-                <img src="placeholder-controller-closeup.png" alt="Controller Closeup">
-            </div>
-        </section>
-
-        <section class="games-best-section">
-            <div class="image-left">
-                <img src="placeholder-controller-console.png" alt="Controller and Console">
-                <div class="play-button"></div>
-            </div>
-            <div class="content-right">
-                <h3>Games play best</h3>
-                <h4>on XBox One</h4>
+            <div class="section-2-img">
+                </div>
+        </div>
+    </section>
+    
+    <section class="section-3">
+        <div class="container section-3-layout">
+            <div class="section-3-img">
+                <div class="play-btn"><i class="fas fa-play"></i></div>
+                </div>
+            <div class="section-3-text">
+                <h2>Games play best on XBox One</h2>
                 <p>XBox Elite Wireless Controller Series 2</p>
-                <a href="#" class="pre-order-link">PRE-ORDER NOW &rarr;</a>
+                <a href="#" class="pre-order-link">PRE-ORDER NOW <i class="fas fa-chevron-right"></i></a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="functions-section">
-            <h2>Our Functions</h2>
+    <section class="social-section">
+        <div class="container">
+            <h3>Our Social Handles</h3>
             <p>XBox Elite Wireless Controller Series 2</p>
-            <div class="functions-grid">
-                <div class="function-item">
-                    <div class="icon"></div>
-                    <span>CONTROLS</span>
-                </div>
-                <div class="function-item">
-                    <div class="icon"></div>
-                    <span>GAMES</span>
-                </div>
-                <div class="function-item">
-                    <div class="icon"></div>
-                    <span>ACCESSORIES</span>
-                </div>
-                <div class="function-item">
-                    <div class="icon"></div>
-                    <span>DEALS</span>
-                </div>
-            </div>
-        </section>
-    </main>
 
-    <footer>
-        </footer>
+            <div class="social-handles-grid">
+                
+                <a href="#" class="icon-box">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube</span>
+                </a>
+                
+                <a href="#" class="icon-box">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+
+                <a href="#" class="icon-box">
+                    <i class="fab fa-twitter"></i>
+                    <span>Twitter</span>
+                </a>
+
+                <a href="#" class="icon-box">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
