@@ -217,7 +217,7 @@ nav {
     padding-top: 5px; 
 }
         
-/* --- ALBUM SLIDER STYLES --- */
+/* --- GAMES SLIDER STYLES (formerly Album) --- */
 .album-slider-container {
     display: flex;
     justify-content: center; 
@@ -264,24 +264,24 @@ nav {
     color: var(--primary-color);
 }
         
-/* ------------------- IMAGE OF THE THING BOX ------------------- */
+/* ------------------- CONTROLLER VISUAL BOX (formerly IMAGE OF THE THING) ------------------- */
 .section-2-image-top {
     /* Max-width limits the size and centers the block */
     width: 100%;
-    max-width: 600px; /* REDUCED max width for a smaller, thumbnail-like size */
+    max-width: 600px; /* Reduced max width for a smaller, thumbnail-like size */
     
     /* 16:9 Aspect Ratio Hack */
     height: 0; 
     padding-bottom: 56.25%; /* Height is 9/16 of the width (16:9 ratio) */
 
-    margin: 30px auto 30px; /* INCREASED margin top/bottom for better separation from edges */
+    margin: 30px auto 30px; /* Increased margin top/bottom for better separation from edges */
     
     /* Display properties */
     position: relative; 
-    background-color: #333333;
+    background-color: var(--mid-bg); 
     border-radius: 15px;
     
-    /* Centering the text inside the box */
+    /* Centering the content inside the box */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -289,8 +289,19 @@ nav {
     color: var(--primary-color);
     font-size: 24px;
     font-weight: 700;
-    
+    overflow: hidden; /* Ensure image doesn't bleed */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+}
+
+/* NEW: Style the actual image inside the container */
+.section-2-image-top img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the 16:9 area */
+    border-radius: 15px;
 }
 
 /* ------------------- FIRST CHOICE GAME (SECTION 2) ------------------- */
@@ -362,6 +373,15 @@ nav {
     color: var(--text-gray);
     font-size: 14px;
     font-weight: 600;
+    overflow: hidden; /* Added to contain the image */
+}
+
+/* NEW: Style the image inside the gallery item */
+.gallery-item-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the container */
+    display: block;
 }
         
 /* ------------------- YOUTUBE VIDEO SECTION (SECTION 3) ------------------- */
@@ -510,5 +530,5 @@ nav {
     .gallery-grid-placeholder {
         grid-template-columns: repeat(2, 1fr);
     }
-    }
+}
 
