@@ -137,9 +137,9 @@ nav {
 /* ------------------- HERO SECTION ------------------- */
 .hero {
     position: relative;
-    padding-top: 100px; 
-    height: 100vh;
-    min-height: 800px;
+    padding-top: 50px; /* REDUCED */
+    height: 90vh; /* REDUCED */
+    min-height: 700px; /* REDUCED */
     overflow: hidden;
 }
 
@@ -261,9 +261,8 @@ nav {
 .section-2-image-top {
     width: 100%;
     max-width: 1200px;
-    /* REDUCED vertical space below the box */
-    margin: 50px auto 20px;
-    height: 300px; 
+    margin: 30px auto 10px; /* REDUCED margin */
+    height: 250px; /* REDUCED height */
     background-color: #333333;
     display: flex;
     align-items: center;
@@ -271,14 +270,13 @@ nav {
     color: var(--primary-color);
     font-size: 24px;
     font-weight: 700;
-    /* ADDED rounded corners */
     border-radius: 15px;
 }
 
 /* ------------------- FIRST CHOICE GAME (SECTION 2) ------------------- */
 .section-2 {
     position: relative;
-    padding: 100px 0;
+    padding: 60px 0; /* REDUCED padding */
     background-color: var(--dark-bg);
     z-index: 5;
 }
@@ -305,7 +303,7 @@ nav {
 
 /* ------------------- IMAGE GALLERY (NEW SECTION) ------------------- */
 .image-gallery-section {
-    padding: 80px 0;
+    padding: 60px 0; /* REDUCED padding */
     text-align: center;
     background-color: var(--dark-bg);
 }
@@ -342,7 +340,7 @@ nav {
 /* ------------------- YOUTUBE VIDEO SECTION (SECTION 3) ------------------- */
 .section-3 {
     position: relative;
-    padding: 100px 0;
+    padding: 60px 0; /* REDUCED padding */
     background-color: var(--dark-bg);
     z-index: 5;
 }
@@ -483,7 +481,7 @@ nav {
     }
     
     .gallery-grid-placeholder {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
