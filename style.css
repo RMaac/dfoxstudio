@@ -269,7 +269,7 @@ nav {
 .section-2-image-top {
     /* Max-width limits the size and centers the block */
     width: 100%;
-    max-width: 600px; /* Thumbnail-like size */
+    max-width: 300px; /* Thumbnail-like size */
     
     /* 16:9 Aspect Ratio Hack */
     height: 0; 
