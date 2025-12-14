@@ -54,14 +54,12 @@ a {
 
 /* Specific styling for the icon - ensures solid dark color and alignment */
 .game-controller-icon-fixed {
-    /* Color of the icon is the same as the text inside the green button */
     color: var(--dark-bg); 
     font-size: 1.2em;
     line-height: 1; 
     position: relative;
-    top: 1px; /* Fine-tune vertical alignment */
+    top: 1px;
 }
-
 
 .pre-order-link {
     color: var(--primary-color);
@@ -160,14 +158,12 @@ nav {
     position: relative;
     z-index: 2;
     display: flex;
-    /* CHANGED: Center content for better overall alignment */
     justify-content: center; 
     align-items: flex-start;
     padding-top: 50px;
 }
 
 .hero-text {
-    /* ADJUSTED: Reduced width and added margin to center overall block */
     max-width: 40%; 
     position: relative; 
     z-index: 5;
@@ -200,46 +196,21 @@ nav {
     /* Position adjustment */
     margin-left: 10px; 
     position: relative;
-    top: -10px; /* Moves it slightly up */
-    right: 5px; /* Moves it slightly right */
+    top: -10px; 
+    right: 5px; 
 }
 
 
 .hero-visual {
     position: relative;
-    /* ADJUSTED: Reduced width to balance with text */
     max-width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center; /* Center items within hero-visual */
-    padding-top: 30px; 
+    padding-top: 5px; 
 }
         
-/* Placeholder for the main controller image - NO URL, uses dark grey */
-.controller-main-placeholder {
-    width: 350px;
-    height: 250px;
-    background: var(--mid-bg); 
-    border-radius: 10px;
-    transform: rotate(-30deg);
-    margin-right: -50px; /* Kept for the tilt effect */
-}
-
-/* Placeholder for the green sphere - FINAL PERFECT PLACEMENT */
-.hero-green-ball {
-    position: absolute;
-    top: 25%; 
-    left: 17%; 
-    width: 100px;
-    height: 100px; 
-    background: var(--primary-color);
-    border-radius: 50%;
-    opacity: 0.7; 
-    z-index: 3; 
-    transform: translateY(-50%);
-}
-
-/* --- ALBUM SLIDER STYLES (Enlarged and with arrows, centered) --- */
+/* --- ALBUM SLIDER STYLES --- */
 .album-slider-container {
     display: flex;
     justify-content: center; 
@@ -249,13 +220,11 @@ nav {
     width: 100%; 
 }
 
-/* New: The viewport acts as a mask, hiding content that slides outside */
 .album-viewport {
     width: 430px; 
     overflow: hidden; 
 }
 
-/* New: The wrapper holds all albums and is translated left/right by JS */
 .album-wrapper {
     display: flex;
     gap: 20px;
@@ -288,13 +257,12 @@ nav {
     color: var(--primary-color);
 }
         
-/* ------------------- SECTION 2: Powerful Controller ------------------- */
-
-/* --- NEW IMAGE AREA ABOVE SECTION 2 TITLE --- */
+/* ------------------- IMAGE OF THE THING BOX ------------------- */
 .section-2-image-top {
     width: 100%;
     max-width: 1200px;
-    margin: 50px auto 50px;
+    /* REDUCED vertical space below the box */
+    margin: 50px auto 20px;
     height: 300px; 
     background-color: #333333;
     display: flex;
@@ -303,9 +271,11 @@ nav {
     color: var(--primary-color);
     font-size: 24px;
     font-weight: 700;
-    border-radius: 10px;
+    /* ADDED rounded corners */
+    border-radius: 15px;
 }
 
+/* ------------------- FIRST CHOICE GAME (SECTION 2) ------------------- */
 .section-2 {
     position: relative;
     padding: 100px 0;
@@ -326,14 +296,50 @@ nav {
     margin-bottom: 10px;
 }
         
-/* Placeholder for the top-right image - NO URL, uses dark grey */
+/* Placeholder for the top-right image */
 .section-2-img {
     height: 350px;
     background: var(--mid-bg); 
     border-radius: 10px;
 }
+
+/* ------------------- IMAGE GALLERY (NEW SECTION) ------------------- */
+.image-gallery-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--dark-bg);
+}
+
+.image-gallery-section h3 {
+    font-size: 2.5vw;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.image-gallery-section p {
+    color: var(--text-gray);
+    margin-bottom: 40px;
+}
+
+.gallery-grid-placeholder {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.gallery-item-placeholder {
+    height: 200px;
+    background-color: var(--mid-bg); 
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-gray);
+    font-size: 14px;
+    font-weight: 600;
+}
         
-/* ------------------- SECTION 3: Games Play Best ------------------- */
+/* ------------------- YOUTUBE VIDEO SECTION (SECTION 3) ------------------- */
 .section-3 {
     position: relative;
     padding: 100px 0;
@@ -348,12 +354,21 @@ nav {
     align-items: center;
 }
         
-/* Placeholder for the bottom-left image - NO URL, uses dark grey */
+/* Image container now holds the YouTube thumbnail */
 .section-3-img {
     height: 400px;
-    background: var(--mid-bg);
     border-radius: 10px;
     position: relative;
+    overflow: hidden;
+}
+
+/* Style for the actual image inside the container */
+.section-3-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
 }
 
 .play-btn {
@@ -369,6 +384,7 @@ nav {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    z-index: 10;
 }
 
 .play-btn i {
@@ -454,11 +470,6 @@ nav {
     .hero-text h1 {
         font-size: 10vw;
     }
-
-    .controller-main-placeholder {
-        transform: rotate(0deg);
-        margin-right: 0;
-    }
     
     .section-3-text {
         margin-left: 0;
@@ -469,6 +480,10 @@ nav {
     
     .social-handles-grid {
         flex-wrap: wrap;
+    }
+    
+    .gallery-grid-placeholder {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
     }
 }
 
