@@ -113,6 +113,7 @@ nav {
     left: 0;
     width: 100%;
     height: 70%;
+    /* Gradient mimicking the original green/dark gray blend */
     background: linear-gradient(135deg, var(--dark-bg) 0%, var(--mid-bg) 50%, #3a3a3a 100%);
     clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
     z-index: 1;
@@ -168,10 +169,11 @@ nav {
     margin-bottom: 20px;
 }
         
-/* Replace with an image placeholder/actual image */
+/* Placeholder for the main controller image */
 .controller-main-placeholder {
     width: 350px;
     height: 250px;
+    /* This URL is a placeholder to represent the dark controller image */
     background: url("https://i.ibb.co/6y46610/controller-main.png") no-repeat center center/contain;
     transform: rotate(-30deg);
     margin-right: -50px;
@@ -183,12 +185,14 @@ nav {
     margin-top: 20px;
 }
 
+/* Placeholder for the large green patterned sphere */
 .hero-green-ball {
     position: absolute;
     top: 40%;
     left: 10%;
     width: 150px;
     height: 150px;
+    /* This URL is a placeholder to represent the green sphere image */
     background: url("https://i.ibb.co/0VfT0Y4/green-ball.png") no-repeat center center/contain;
     z-index: 3;
     transform: translateY(-50%);
@@ -198,7 +202,6 @@ nav {
 .section-2 {
     position: relative;
     padding: 100px 0;
-    overflow: hidden;
     background-color: var(--dark-bg);
     z-index: 5;
 }
@@ -217,7 +220,7 @@ nav {
 }
         
 .section-2-img {
-    /* Placeholder for the top-right image */
+    /* Placeholder for the top-right image (close-up of controller) */
     height: 350px;
     background: url("https://i.ibb.co/L5rJg7T/controller-buttons.png") no-repeat center right/cover;
     border-radius: 10px;
@@ -227,7 +230,6 @@ nav {
 .section-3 {
     position: relative;
     padding: 100px 0;
-    overflow: hidden;
     background-color: var(--dark-bg);
     z-index: 5;
 }
@@ -272,6 +274,7 @@ nav {
     position: relative;
     padding: 40px;
     background: #202020;
+    /* Used clip-path to create the diagonal-cut look */
     clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
     margin-left: -50px;
 }
@@ -282,7 +285,7 @@ nav {
     margin-bottom: 10px;
 }
         
-/* ------------------- FOOTER/SOCIAL SECTION ------------------- */
+/* ------------------- SOCIAL HANDLES SECTION ------------------- */
 .social-section {
     padding: 80px 0 100px;
     text-align: center;
@@ -318,7 +321,7 @@ nav {
     color: var(--primary-color);
     margin-bottom: 10px;
     padding: 15px;
-    border: 1px solid var(--text-gray); /* Adjusted for social section look */
+    border: 1px solid var(--text-gray); 
     border-radius: 10px;
     transition: all 0.3s;
 }
@@ -329,7 +332,7 @@ nav {
     border-color: var(--primary-color);
 }
 
-/* Basic responsiveness for smaller screens */
+/* Basic Responsiveness */
 @media (max-width: 768px) {
     .hero-content, .section-2-layout, .section-3-layout {
         flex-direction: column;
