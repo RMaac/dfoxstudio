@@ -37,22 +37,20 @@ a {
 .btn-primary {
     display: inline-block;
     background: var(--primary-color);
-    color: var(--dark-bg); /* Text color inside button is dark */
+    color: var(--dark-bg);
     padding: 10px 25px;
     border-radius: 50px;
     font-weight: 600;
     transition: background 0.3s;
-    /* Added flex properties for perfect vertical alignment */
     display: flex; 
     align-items: center;
-    gap: 8px; /* Space between icon and text */
+    gap: 8px;
 }
 
 .btn-primary:hover {
     background: #4cc936;
 }
 
-/* Specific styling for the icon - ensures solid dark color and alignment */
 .game-controller-icon-fixed {
     color: var(--dark-bg); 
     font-size: 1.2em;
@@ -71,12 +69,23 @@ a {
     margin-left: 5px;
 }
 
-/* New style to center the "Play Games" button area horizontally */
-.centered-button {
-    justify-content: center; /* Centers items horizontally in the flex container */
-    width: 100%; 
+/* Styling for the More Images button/link */
+.more-images-link {
+    display: inline-block;
+    margin-top: 20px;
+    /* Reset button specific styles */
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 0;
 }
 
+.centered-button {
+    justify-content: center;
+    width: 100%; 
+}
 
 /* ------------------- HEADER & NAVBAR ------------------- */
 header {
@@ -114,7 +123,6 @@ nav {
     color: var(--primary-color);
 }
 
-/* Style for the LOGIN button/box */
 .nav-button-box {
     margin-left: 30px;
 }
@@ -137,9 +145,9 @@ nav {
 /* ------------------- HERO SECTION ------------------- */
 .hero {
     position: relative;
-    padding-top: 50px; /* REDUCED */
-    height: 90vh; /* REDUCED */
-    min-height: 700px; /* REDUCED */
+    padding-top: 50px;
+    height: 90vh;
+    min-height: 700px;
     overflow: hidden;
 }
 
@@ -188,12 +196,11 @@ nav {
     gap: 0; 
 }
 
-/* NEW STYLE for the Free price text */
+/* UPDATED: Price color is now white/light */
 .free-price-tag {
     font-size: 12px;
-    color: var(--text-gray);
+    color: var(--text-light); 
     font-weight: 600;
-    /* Position adjustment */
     margin-left: 10px; 
     position: relative;
     top: -10px; 
@@ -206,7 +213,7 @@ nav {
     max-width: 40%;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items within hero-visual */
+    align-items: center;
     padding-top: 5px; 
 }
         
@@ -261,8 +268,8 @@ nav {
 .section-2-image-top {
     width: 100%;
     max-width: 1200px;
-    margin: 30px auto 10px; /* REDUCED margin */
-    height: 250px; /* REDUCED height */
+    margin: 20px auto 10px;
+    height: 250px;
     background-color: #333333;
     display: flex;
     align-items: center;
@@ -276,7 +283,7 @@ nav {
 /* ------------------- FIRST CHOICE GAME (SECTION 2) ------------------- */
 .section-2 {
     position: relative;
-    padding: 60px 0; /* REDUCED padding */
+    padding: 40px 0;
     background-color: var(--dark-bg);
     z-index: 5;
 }
@@ -294,7 +301,6 @@ nav {
     margin-bottom: 10px;
 }
         
-/* Placeholder for the top-right image */
 .section-2-img {
     height: 350px;
     background: var(--mid-bg); 
@@ -302,8 +308,14 @@ nav {
 }
 
 /* ------------------- IMAGE GALLERY (NEW SECTION) ------------------- */
+
+/* NEW: Style to hide elements initially */
+.hidden-gallery-item {
+    display: none !important; 
+}
+
 .image-gallery-section {
-    padding: 60px 0; /* REDUCED padding */
+    padding: 40px 0;
     text-align: center;
     background-color: var(--dark-bg);
 }
@@ -321,8 +333,10 @@ nav {
 
 .gallery-grid-placeholder {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
     gap: 20px;
+    max-width: 600px;
+    margin: 0 auto 30px;
 }
 
 .gallery-item-placeholder {
@@ -340,7 +354,7 @@ nav {
 /* ------------------- YOUTUBE VIDEO SECTION (SECTION 3) ------------------- */
 .section-3 {
     position: relative;
-    padding: 60px 0; /* REDUCED padding */
+    padding: 40px 0;
     background-color: var(--dark-bg);
     z-index: 5;
 }
@@ -352,7 +366,6 @@ nav {
     align-items: center;
 }
         
-/* Image container now holds the YouTube thumbnail */
 .section-3-img {
     height: 400px;
     border-radius: 10px;
@@ -360,7 +373,6 @@ nav {
     overflow: hidden;
 }
 
-/* Style for the actual image inside the container */
 .section-3-img img {
     width: 100%;
     height: 100%;
@@ -369,6 +381,7 @@ nav {
     display: block;
 }
 
+/* UPDATED: Play button circle changed to dark/border, triangle changed to green */
 .play-btn {
     position: absolute;
     top: 50%;
@@ -376,7 +389,8 @@ nav {
     transform: translate(-50%, -50%);
     width: 60px;
     height: 60px;
-    background: var(--primary-color);
+    background: var(--mid-bg); 
+    border: 3px solid var(--primary-color); 
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -386,7 +400,7 @@ nav {
 }
 
 .play-btn i {
-    color: var(--dark-bg);
+    color: var(--primary-color); /* Green Triangle Color */
     font-size: 20px;
     margin-left: 3px;
 }
@@ -407,7 +421,7 @@ nav {
         
 /* ------------------- SOCIAL HANDLES SECTION ------------------- */
 .social-section {
-    padding: 80px 0 100px;
+    padding: 50px 0 70px;
     text-align: center;
 }
 
@@ -481,7 +495,8 @@ nav {
     }
     
     .gallery-grid-placeholder {
+        /* On mobile, this remains 2 columns, as it's the main layout now */
         grid-template-columns: repeat(2, 1fr);
     }
-}
+	}
 
