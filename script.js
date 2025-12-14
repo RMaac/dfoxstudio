@@ -1,12 +1,12 @@
+
 document.addEventListener('DOMContentLoaded', () => {
-    // ------------------- GAMES SLIDER LOGIC (formerly ALBUM SLIDER) -------------------
-    const wrapper = document.querySelector('.game-wrapper'); // Updated class name
+    // ------------------- GAMES SLIDER LOGIC -------------------
+    const wrapper = document.querySelector('.game-wrapper');
     const slideLeftBtn = document.getElementById('slide-left');
     const slideRightBtn = document.getElementById('slide-right');
-    const gameBoxWidth = 150; // Updated variable name
+    const gameBoxWidth = 150; 
     let currentPosition = 0;
-    const gameCount = wrapper.children.length; // Updated variable name
-    // Assuming 3 visible items in the 430px viewport on larger screens
+    const gameCount = wrapper.children.length; 
     const maxShift = (gameCount - 3) * gameBoxWidth; 
 
 
@@ -44,10 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 imagesShown = true;
             } else {
                 // State 2: Redirect to the full image page
-                // Redirects to a placeholder page. Create 'image-gallery-page.html' to continue the design.
                 window.location.href = 'image-gallery-page.html'; 
             }
         });
     }
 });
-
