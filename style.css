@@ -58,12 +58,35 @@ a {
     margin-left: 5px;
 }
 
-.thumbnail-placeholder {
-    width: 40px; 
-    height: 40px; 
-    background-color: #444; 
-    border-radius: 5px;
+/* --- NEW ALBUM BOX STYLES --- */
+.album-boxes-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    align-items: center;
 }
+
+.album-box {
+    /* Made bigger for album/game titles */
+    width: 120px; 
+    height: 120px; 
+    background-color: #383838; /* A darker gray for the placeholder */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-gray);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.album-box:hover {
+    transform: scale(1.05);
+    background-color: #454545;
+}
+
 
 
 /* ------------------- HEADER & NAVBAR ------------------- */
